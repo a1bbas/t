@@ -1,0 +1,6 @@
+<odoo>
+    <record id="group_invoice_number_edit" model="res.groups">
+        <field name="name">Invoice Number Editor</field>
+        <field name="category_id" ref="base.module_category_accounting"/>
+    </record>
+</odoo>
