@@ -1,0 +1,79 @@
+<odoo>
+
+
+
+    <!-- ================= ACTIONS ================= -->
+    <record id="action_stage" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">stage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_color" model="ir.actions.act_window">
+        <field name="name">Colors</field>
+        <field name="res_model">color</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_category" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_department" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">department</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_type" model="ir.actions.act_window">
+        <field name="name">Routing Type</field>
+        <field name="res_model">routing.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_finish" model="ir.actions.act_window">
+        <field name="name">Finishes</field>
+        <field name="res_model">finish</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- ================= MENUS ================= -->
+    <menuitem id="menu_stage"
+              name="Stages"
+              parent="menu_product_routing_info"
+              action="action_stage"
+              sequence="1"/>
+
+    <menuitem id="menu_color"
+              name="Colors"
+              parent="menu_product_routing_info"
+              action="action_color"
+              sequence="2"/>
+
+    <menuitem id="menu_category"
+              name="Categories"
+              parent="menu_product_routing_info"
+              action="action_category"
+              sequence="3"/>
+
+    <menuitem id="menu_department"
+              name="Departments"
+              parent="menu_product_routing_info"
+              action="action_department"
+              sequence="4"/>
+
+    <menuitem id="menu_type"
+              name="Types"
+              parent="menu_product_routing_info"
+              action="action_type"
+              sequence="5"/>
+
+    <menuitem id="menu_finish"
+              name="Finishes"
+              parent="menu_product_routing_info"
+              action="action_finish"
+              sequence="6"/>
+
+</odoo>
