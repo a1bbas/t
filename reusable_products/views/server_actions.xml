@@ -1,0 +1,44 @@
+<odoo>
+    <record id="reusable_products.server_actions" model="ir.actions.server">
+
+        <field name="name">Create Reusable Products</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = {
+            'name': 'Create Reusable Products of selected products',
+            'type': 'ir.actions.act_window',
+            'res_model': 'reusable_products.reusable_products',
+            'view_mode': 'form',
+            'view_id': env.ref('reusable_products.view_reusable_products_wizard_form').id,
+            'target': 'new',
+            'context': env.context,
+            }
+        </field>
+        <field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="binding_type">action</field>
+
+    </record>
+
+
+    <record id="reusable_products.server_actions_sterile" model="ir.actions.server">
+
+        <field name="name">Create Sterile Products</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = {
+            'name': 'Create Sterile Products of selected products',
+            'type': 'ir.actions.act_window',
+            'res_model': 'reusable_products.reusable_products',
+            'view_mode': 'form',
+            'view_id': env.ref('reusable_products.view_sterile_products_wizard_form').id,
+            'target': 'new',
+            'context': env.context,
+            }
+        </field>
+        <field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="binding_type">action</field>
+
+    </record>
+</odoo>

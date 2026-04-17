@@ -1,0 +1,58 @@
+<odoo>
+
+
+    <record id="view_reusable_products_wizard_form" model="ir.ui.view">
+        <field name="name">reusable.products.wizard.form</field>
+        <field name="model">reusable_products.reusable_products</field>
+        <field name="arch" type="xml">
+            <form string="Reusable Products Wizard">
+                <group>
+                    <field name="product_category_id"/>
+                </group>
+                <footer>
+                    <button string="Create" type="object" name="action_create_reusable_products"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_sterile_products_wizard_form" model="ir.ui.view">
+        <field name="name">sterile.products.wizard.form</field>
+        <field name="model">reusable_products.reusable_products</field>
+        <field name="arch" type="xml">
+            <form string="Sterile Products Wizard">
+                <group>
+                    <field name="product_category_id"/>
+                </group>
+                <footer>
+                    <button string="Create" type="object" name="action_create_sterile_products"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_reusable_products_button" model="ir.ui.view">
+        <field name="name">create reusbale products</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//header" position="inside">
+
+                <button name="reusable_products.server_actions" string="Create Reusable Product" class="btn btn-primary"
+                        type="action"
+                        attrs="{'invisible': ['|', ('name','ilike','- Reusable'), ('name','ilike','- Sterile')]}"/>
+                <button name="reusable_products.server_actions_sterile" string="Create Sterile Product"
+                        class="btn btn-primary" type="action"
+                        attrs="{'invisible': ['|', ('name','ilike','- Sterile'), ('name','ilike','- Reusable')]}"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

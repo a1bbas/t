@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_move_form_edit_invoice_number" model="ir.ui.view">
+        <field name="name">account.move.form.edit.invoice.number</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <button name="action_edit_invoice_number"
+                        type="object"
+                        string="Edit Number"
+                        groups="account_invoice_number_edit.group_invoice_number_edit"
+                        />
+
+
+            </xpath>
+        </field>
+    </record>
+</odoo>
