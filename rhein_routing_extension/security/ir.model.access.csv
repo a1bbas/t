@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stage,access_stage,model_stage,,1,1,1,1
+access_color,access_color,model_color,,1,1,1,1
+access_category,access_category,model_category,,1,1,1,1
+access_department,access_department,model_department,,1,1,1,1
+access_routing_type,access_routing_type,model_routing_type,,1,1,1,1
+access_finish,access_finish,model_finish,,1,1,1,1

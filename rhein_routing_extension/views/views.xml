@@ -1,0 +1,80 @@
+<odoo>
+    <data>
+
+
+        <record id="view_mrp_routing_search_groupby" model="ir.ui.view">
+            <field name="name">mrp.routing.search.groupby</field>
+            <field name="model">mrp.routing</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_search_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//search" position="inside">
+                    <group string="Group By">
+                        <filter name="group_by_type"
+                                string="Type"
+                                context="{'group_by': 'type_id'}"/>
+                        <filter name="group_by_finish"
+                                string="Finish"
+                                context="{'group_by': 'finish_id'}"/>
+                        <filter name="group_by_stage"
+                                string="Stage"
+                                context="{'group_by': 'state_id'}"/>
+                        <filter name="group_by_color"
+                                string="Color"
+                                context="{'group_by': 'color_id'}"/>
+                        <filter name="group_by_category"
+                                string="Category"
+                                context="{'group_by': 'category_id'}"/>
+                        <filter name="group_by_department"
+                                string="Department"
+                                context="{'group_by': 'department_id'}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_mrp_routing_tree_inherit" model="ir.ui.view">
+            <field name="name">mrp.routing.tree.inherit</field>
+            <field name="model">mrp.routing</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_tree_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//tree" position="inside">
+
+                    <field name="route_name"/>
+                    <field name="type_id"/>
+                    <field name="finish_id"/>
+                    <field name="state_id"/>
+                    <field name="color_id"/>
+                    <field name="category_id"/>
+                    <field name="department_id"/>
+                    <field name="additional_info"/>
+
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="mrp_routing_form_inherit_custom" model="ir.ui.view">
+            <field name="name">mrp.routing.form.inherit.custom</field>
+            <field name="model">mrp.routing</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//sheet/group" position="inside">
+                    <group string="Custom Fields">
+                        <field name="route_name" string="Route Name"/>
+                        <field name="type_id"/>
+                        <field name="category_id"/>
+                        <field name="department_id"/>
+                        <field name="state_id"/>
+                        <field name="finish_id"/>
+                        <field name="color_id"/>
+                        <field name="additional_info"/>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

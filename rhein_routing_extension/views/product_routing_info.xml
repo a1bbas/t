@@ -1,0 +1,159 @@
+<odoo>
+
+    <!-- Root Menu -->
+    <menuitem id="menu_product_routing_info"
+              name="Product Routing Info"
+              parent="stock.menu_stock_root"
+              sequence="1000"/>
+
+    <!-- ================= STAGE ================= -->
+    <record id="view_stage_tree" model="ir.ui.view">
+        <field name="name">stage.tree</field>
+        <field name="model">stage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_stage_form" model="ir.ui.view">
+        <field name="name">stage.form</field>
+        <field name="model">stage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================= COLOR ================= -->
+    <record id="view_color_tree" model="ir.ui.view">
+        <field name="name">color.tree</field>
+        <field name="model">color</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_color_form" model="ir.ui.view">
+        <field name="name">color.form</field>
+        <field name="model">color</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================= CATEGORY ================= -->
+    <record id="view_category_tree" model="ir.ui.view">
+        <field name="name">category.tree</field>
+        <field name="model">category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_category_form" model="ir.ui.view">
+        <field name="name">category.form</field>
+        <field name="model">category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================= DEPARTMENT ================= -->
+    <record id="view_department_tree" model="ir.ui.view">
+        <field name="name">department.tree</field>
+        <field name="model">department</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_department_form" model="ir.ui.view">
+        <field name="name">department.form</field>
+        <field name="model">department</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================= TYPE ================= -->
+    <record id="view_routing_type_tree" model="ir.ui.view">
+        <field name="name">routing.type.tree</field>
+        <field name="model">routing.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_routing_type_form" model="ir.ui.view">
+        <field name="name">routing.type.form</field>
+        <field name="model">routing.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================= FINISH ================= -->
+    <record id="view_finish_tree" model="ir.ui.view">
+        <field name="name">finish.tree</field>
+        <field name="model">finish</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_finish_form" model="ir.ui.view">
+        <field name="name">finish.form</field>
+        <field name="model">finish</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
