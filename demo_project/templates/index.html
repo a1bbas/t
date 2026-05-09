@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{name}} website
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>This is home Page</h1>
+    <button class="btn btn-primary">Test button</button>
+    {% for x in range(10) %}
+        {% if x % 2 == 0%}
+            <p>{{x}}---even</p>
+        {% else %}
+        <p>{{x}}---odd</p>
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
